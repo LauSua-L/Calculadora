@@ -54,3 +54,20 @@ button.igual{
 button.cero{
     grid-column: span 2;
 }
+
+
+/* volvemos botón el eje para q se pueda mover el cuadrito */
+button[tecla] { position: relative; }
+
+/* El cuadrito emergente */
+button[tecla]:hover::before {
+    content: attr(tecla); /*attr extrae el atributo que esta en tecla */
+    position: absolute;
+    bottom: 120%; left: 50%;
+    transform: translateX(-50%);
+    background: rgb(244, 185, 255); /* Color lila suave */
+    color: #a521b6;    /* Texto morado oscuro */
+    padding: 15px 15px;
+    border-radius: 4px;
+    font-size: 15px;
+}
