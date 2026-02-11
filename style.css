@@ -27,7 +27,7 @@ body{
 
 .teclas{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     gap:10px;
 }
 
@@ -49,6 +49,7 @@ button.igual{
     background-color:rgb(222, 94, 245);
     color: white;
     grid-row: span 2;
+    grid-column: span 2;
 }
 
 button.cero{
@@ -61,12 +62,12 @@ button[tecla] { position: relative; }
 
 /* El cuadrito emergente */
 button[tecla]:hover::before {
-    content: attr(tecla); /*attr extrae el atributo que esta en tecla */
+    content: attr(tecla); /*attr extrae el atributo que esta en tecla osea lo q esta escrito*/
     position: absolute;
     bottom: 120%; left: 50%;
     transform: translateX(-50%);
-    background: rgb(244, 185, 255); /* Color lila suave */
-    color: #a521b6;    /* Texto morado oscuro */
+    background: rgb(244, 185, 255); 
+    color: #a521b6; 
     padding: 15px 15px;
     border-radius: 4px;
     font-size: 15px;
